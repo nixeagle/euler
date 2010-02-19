@@ -1,1 +1,10 @@
-/bin/cat: hi: No such file or directory
+This repository is a collection of work by various members of the
+eighthbit.net irc network. The code in this repository is stored in
+directories by problem number.
+
+Eg code that solves problem number 1 go in the directory 1/ and so on.
+
+
+If a problem requires data files or other things, they can go in the
+directory as well. The copy right of the code is released under whatever
+license is at the top of each individual solution code.
