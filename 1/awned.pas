@@ -1,4 +1,5 @@
-program sumuthou(output);
+{Alexandre Marcondes - Project Euler - Problem 1}
+program p1(output);
 
 var i : integer;
     ret : real;
@@ -15,5 +16,4 @@ begin
     end;
 
     writeln (ret:2:2);
-
 end.
