@@ -4,9 +4,38 @@ directories by problem number.
 
 Eg code that solves problem number 1 go in the directory 1/ and so on.
 
-
 If a problem requires data files or other things, they can go in the
 directory as well.
 
 The copyright of the code is released under the MIT license unless
 otherwise stated at the top of each code file.
+
+Finally some notes: This is a group effort by the members of
+irc://irc.eighthbit.net/#euler.
+
+
+As far as submissions to project-euler it is under the honor code that you
+submit only work that you yourself have done and have learned how to do.
+
+The rules for #euler are as follows
+
+ 1. Any and all programming languages are permitted, the channel #euler is
+ not an appropriate place to debate which language is better. (However it
+ is an appropriate place to debate which _algorithm_ is better).
+
+ 2. Any member of the channel may view any of the files and suggest to
+ those authors ways to improve their code. However putting down any member
+ of the channel or their code, or their choice of language is not
+ acceptable.
+
+ 3. Members of the channel by participating agree to be open to positive
+ constructive criticism of their work. This goes hand in hand with not
+ negatively criticizing others work.
+
+ 4. In general a negative attitude in #euler is a good way to be quieted
+ for a few hours. A non exhaustive list of examples are as follows:
+   - Complaining that <foo> is difficult
+   - Complaining that <foo> is stupid
+   - Complaining about other unrelated issues, we have #offtopic for that
+   - Complaining about other channel members, you may take those
+     complaints to #eighthbit.
