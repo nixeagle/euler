@@ -1,3 +1,7 @@
+;;; It should be noted that solution 1 and 3 are especially slow as they
+;;; attempt to compose a predicate as some sort of "pure functions", the
+;;; ones building the predicate out a local function binding are roughly 3
+;;; times faster.
 (in-package :nisp.euler)
 
 (defun sum-integers (start end &key (test #'integerp) (step 1))
