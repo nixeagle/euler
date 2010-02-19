@@ -6,5 +6,7 @@ Eg code that solves problem number 1 go in the directory 1/ and so on.
 
 
 If a problem requires data files or other things, they can go in the
-directory as well. The copy right of the code is released under whatever
-license is at the top of each individual solution code.
+directory as well.
+
+The copyright of the code is released under the MIT license unless
+otherwise stated at the top of each code file.
