@@ -1,11 +1,13 @@
 (in-package :nisp.euler)
 
-(defun sum-integers (start end &key (test #'=) (step 1))
+(defun sum-integers (start end &key (test #'integerp) (step 1))
   "Sum numbers satisfying PREDICATE from START to END."
+  (declare (optimize (safety 0) (debug 0) (speed 3) (space 0))
+           (type fixnum start end step))
   (iterate (for n :from start :to end :by step)
            (when (funcall test n)
              (sum n :into result))
-           (declare (fixnum result))    ; Help the compiler optimize.
+           (declare (type integer result))
            (finally (return result))))
 
 (defun solution-1/1 ()
@@ -20,3 +22,16 @@ This is a purely functional way of solving this problem."
   (flet ((validp (n)
            (or (= 0 (mod n 3)) (= 0 (mod n 5)))))
     (sum-integers 0 999 :test #'validp)))
+
+(defun sum-integers-recursive
+    (current end &key (total 0) (step 1) (test #'integerp))
+  (declare (optimize (safety 0) (debug 0) (speed 3) (space 0)
+                     (compilation-speed 0))
+           (type fixnum current end step)
+           (type integer total))
+  (if (< current end)
+      (sum-integers2 (1+ current) end :step step :test test
+                     :total (if (funcall test current)
+                                (+ total current)
+                                total))
+      total))
