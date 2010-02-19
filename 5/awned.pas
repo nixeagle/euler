@@ -2,7 +2,7 @@
 program p5(output);
 
 var x : longint;
-    i : longint;
+    i : longint;    
     a : array [1..20] of integer;
 
 begin
@@ -11,9 +11,9 @@ begin
 
     x := 0;
 
-    while ((a[1..20]) <> 0) do begin
+    while (a[1] <> 0) and (a[2] <> 0) and (a[3] <> 0) and (a[4] <> 0) do begin
         x := x + 1;
         for i := 1 to 20 do
-            a[i] = x / i;
+            a[i] = x div i
     end;
 end.
