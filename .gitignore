@@ -2,3 +2,5 @@ duckinator
 baddog
 awned
 *.o
+*~
+*.fasl
