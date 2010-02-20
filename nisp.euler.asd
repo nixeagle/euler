@@ -2,6 +2,9 @@
   :serial t
   :components
   ((:file "package")
+   (:module "utilities"
+            :components
+            ((:file "utils")))
    (:module "1"
             :components
             ((:file "sum-integers")))
