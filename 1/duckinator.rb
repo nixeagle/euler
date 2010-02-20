@@ -1,1 +1,5 @@
-i = 0; (1..999).each { |x| i+=x if ((x%3.0==0)||(x%5.0==0)) }; puts i
+ret = 0
+1.upto(999) do |i|
+  ret+=i if ( (i%3==0)||(i%5==0) )
+end
+puts ret
