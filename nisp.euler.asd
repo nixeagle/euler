@@ -11,7 +11,9 @@
    (:module "3"
             :components
             ((:file "prime-factor")))
-
+   (:module "4"
+            :components
+            ((:file "palindromic-numbers")))
    (:module "5"
             :components
             ((:file "lcm")))))
