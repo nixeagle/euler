@@ -4,8 +4,8 @@
   "Next number in the sequence is the last two added."
   (+ first second))
 
-(defun sum-fibs (&key (predicate #'evenp) (old 1) (current 2) (total 2)
-                      (upto 4000000))
+(defun sum-fibs (&key (predicate #'integerp) (old 0) (current 1) (total 0)
+                 (upto 4000000))
   "Sum fibonacci numbers UPTO using PREDICATE."
   (declare (optimize (speed 3) (debug 2)))
   (if (< upto current)
@@ -14,3 +14,7 @@
                 :upto upto :total (if (funcall predicate current)
                                       (+ total current)
                                       total))))
+
+(defun solution-3/1 ()
+  (sum-fibs :predicate #'evenp
+            :upto 4000000))
