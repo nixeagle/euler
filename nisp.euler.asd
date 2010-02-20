@@ -4,4 +4,7 @@
   ((:file "package")
    (:module "1"
             :components
-            ((:file "sum-integers")))))
+            ((:file "sum-integers")))
+   (:module "5"
+            :components
+            ((:file "lcm")))))
