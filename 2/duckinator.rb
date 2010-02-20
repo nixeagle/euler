@@ -1,25 +1,23 @@
 def duckinator
-vals = [1, 2]
-
+seed1, seed2 = 1, 2
 limit = 4_000_000
 
+i = seed2
 ret = 0
-
-if vals[0] % 2 == 0
-  ret += vals[0]
-end
-
-if vals[1] % 2 == 0
-  ret += vals[1]
-end
-
-i = vals[1]
 new = 0
-while new <= limit
-  new = vals[0]+vals[1]
-  vals << new
-  vals.shift
-  ret += new if vals[1] % 2 == 0
+
+if seed1 % 2 == 0
+  ret += seed1
+end
+
+if seed2 % 2 == 0
+  ret += seed2
+end
+
+while seed2 <= limit
+  new = seed1+seed2
+  seed1, seed2 = seed2, new
+  ret += new if seed2 % 2 == 0
 end
 puts ret
 
