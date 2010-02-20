@@ -24,6 +24,8 @@
       (declare (optimize (speed 3) (debug 0) (safety 0) (compilation-speed 0)))
       (if reset
           (car (setq current 2
+                     cache ()
+                     biggest-prime 2
                      prime (list 2)))
         (progn
           (incf current)
