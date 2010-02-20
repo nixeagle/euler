@@ -1,4 +1,3 @@
-def foo
 vals = [1, 2]
 
 limit = 4_000_000
@@ -23,5 +22,3 @@ while new <= limit
   end
 end
 puts ret
-
-end
