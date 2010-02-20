@@ -54,3 +54,19 @@ This is a purely functional way of solving this problem."
   (flet ((validp (n)
            (or (= 0 (mod n 3)) (= 0 (mod n 5)))))
     (sum-integers-recursive 0 999 :test #'validp)))
+
+
+(defun last-integer-before (number divisor)
+  (- number (mod number divisor)))
+
+(defun number-of-terms (last step)
+  (the integer (/ (last-integer-before last step) step)))
+
+(defun arithmetic-progression2 (start end step)
+  (* (/ (number-of-terms (last-integer-before end step) step) 2)
+     (+ start (last-integer-before end step))))
+
+(defun solution-1/5 ()
+  (- (+ (arithmetic-progression2 3 1000 3)
+        (arithmetic-progression2 5 999 5))
+     (arithmetic-progression2 15 999 15)))
