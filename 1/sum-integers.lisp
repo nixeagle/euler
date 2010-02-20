@@ -67,6 +67,7 @@ This is a purely functional way of solving this problem."
      (+ start (last-integer-before end step))))
 
 (defun solution-1/5 ()
+  "This is probably the fastest as there is no loop happening to do this."
   (- (+ (arithmetic-progression2 3 1000 3)
         (arithmetic-progression2 5 999 5))
      (arithmetic-progression2 15 999 15)))
