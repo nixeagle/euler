@@ -1,16 +1,12 @@
-seeds = [1, 1]
+seed1, seed2 = 1, 1
 sum = 0
+term = 0
 
-while 0
-  term = seeds.first + seeds.last
-  seeds << term
-  seeds.shift
+while 4_000_000 > term
+  term = seed1 + seed2
+  seed1, seed2 = seed2, term
   
-  break if term > 4_000_000
-  
-  if term%2 == 0
-    sum += term
-  end
+  sum += term if term%2 == 0
 end
 
 puts sum
