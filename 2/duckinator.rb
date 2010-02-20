@@ -1,3 +1,4 @@
+def duckinator
 vals = [1, 2]
 
 limit = 4_000_000
@@ -17,8 +18,8 @@ new = 0
 while new <= limit
   new = vals[0]+vals[1]
   vals = [vals[1], new]
-  if vals[1] % 2 == 0
-    ret += new
-  end
+  ret += new if vals[1] % 2 == 0
 end
 puts ret
+
+end
