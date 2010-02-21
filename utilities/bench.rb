@@ -1,17 +1,22 @@
 #!/usr/bin/env ruby
 
 file = ARGV.shift
+
 reps = ARGV.shift.to_i
 reps = 100_000 unless reps && reps > 0
+
+width = ARGV.shift.to_i
+width = 70 unless width && width > 0
 
 unless file
   puts 'Filename required'
   puts
-  puts 'Usage:   utilities/bench.rb <script> [repetitions]'
+  puts 'Usage:   utilities/bench.rb <script> [repetitions] [bar_width]'
   puts
   puts 'Example: utilities/bench.rb 1/danopia.rb'
   puts '         utilities/bench.rb 25/baddog.rb 1,000,000'
   puts '         utilities/bench.rb 3/duckinator.rb 25000'
+  puts '         utilities/bench.rb 3/duckinator.rb 12,500 100'
   puts
   puts 'Repetitions default to 100,000.'
   puts
@@ -30,8 +35,7 @@ puts "Script: #{file}"
 code = File.read(file)
 eval "def go; #{code}; end"
 
-step_size = (reps/100).to_i
-puts "Step size: #{step_size}"
+step_size = (reps/width).to_i
 
 total = 0
 buffered = 0
@@ -49,7 +53,7 @@ reps.times do |rep|
   buffered += 1
   if buffered > step_size
     buffered = 0
-    old_out.print "\rRunning... [#{('='*((rep.to_f/reps)*70)+'>').ljust(70,' ')}]"
+    old_out.print "\rRunning... [#{('='*((rep.to_f/reps)*width)+'>').ljust(width,' ')}]"
     old_out.flush
   end
 end
