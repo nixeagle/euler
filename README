@@ -2,7 +2,7 @@ This repository is a collection of work by various members of the
 eighthbit.net irc network. The code in this repository is stored in
 directories by problem number.
 
-Eg code that solves problem number 1 go in the directory 1/ and so on.
+For example, code that solves the first problem go in the sub-directory 1/
 
 If a problem requires data files or other things, they can go in the
 directory as well.
@@ -13,24 +13,27 @@ otherwise stated at the top of each code file.
 Finally some notes: This is a group effort by the members of
 irc://irc.eighthbit.net/#euler.
 
-
 As far as submissions to project-euler it is under the honor code that you
 submit only work that you yourself have done and have learned how to do.
 
-The rules for #euler are as follows
+-------
+irc://irc.eighthbit.net/#euler channel rules, these are incredibly
+important for all channel members to follow. Joining the channel implies
+that you are willing to follow these rules.
 
  1. Any and all programming languages are permitted, the channel #euler is
- not an appropriate place to debate which language is better. (However it
- is an appropriate place to debate which _algorithm_ is better).
+ not an appropriate place to debate which language is better. However
+ debates and demonstrations of which _algorithm_ is better are not only
+ appropriate but is to be encouraged.
 
- 2. Any member of the channel may view any of the files and suggest to
- those authors ways to improve their code. However putting down any member
- of the channel or their code, or their choice of language is not
- acceptable.
+ 2. Any member of the channel may view any of the files and suggest
+ improvements to the code and or algorithms. However negative criticisms
+ or put downs of the author, code, or language it is written in are not
+ acceptable
 
- 3. Members of the channel by participating agree to be open to positive
- constructive criticism of their work. This goes hand in hand with not
- negatively criticizing others work.
+ 3. Participation in #euler implies that you are open to positive critical
+ feedback on your code, coding style, and or algorithms. If you are not
+ able to handle this, please /part the channel.
 
  4. In general a negative attitude in #euler is a good way to be quieted
  for a few hours. A non exhaustive list of examples are as follows:
