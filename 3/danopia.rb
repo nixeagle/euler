@@ -3,7 +3,7 @@ def factors number
     next if (number % factor) != 0
     return [factor] + factors(number/factor)
   }
-  return [number]
+  return [1, number]
 end
 
 p factors(600851475143).max
