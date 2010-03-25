@@ -9,9 +9,10 @@ def divisors number
 end
 
 def psr number
-  factors = divisors(number)
-  limit = Math.sqrt(number)
-  factors.reverse.find{|factor| factor <= limit}
+  Math.sqrt(number).to_i.downto(1) {|factor|
+    return factor if (number % factor) == 0
+  }
+  return 1 # Is this right?
 end
 
 def primes_to cap
@@ -25,4 +26,5 @@ end
 #p primes_to(15) #=> [2, 3, 5, 7, 11, 13]
 
 product = primes_to(190).inject(1){|num, sum| sum * num}
+p product
 p psr(product)
