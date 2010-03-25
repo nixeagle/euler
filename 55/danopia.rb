@@ -1,19 +1,19 @@
-def palindromic? num
-  num = num.to_s
-  num == num.reverse
-end
-
-def lychrel? num
-  50.times do
-    num += num.to_s.reverse.to_i
-    return false if palindromic? num
+class Fixnum
+  def lychrel?
+    num_i = self
+    num_s = num_i.to_s
+    50.times do
+      num_i = num_i + num_s.reverse.to_i
+      num_s = num_i.to_s
+      return false if num_s == num_s.reverse
+    end
+    true
   end
-  true
 end
 
-count = 0
-1.upto 10_000 do |num|
-  count += 1 if lychrel? num
-end
-
-p count
+#~ t=Time.now
+#~ 20.times {
+  p (1..10_000).select(&:lychrel?).size
+#~ }
+#~ f=Time.now
+#~ p (f-t)/20
